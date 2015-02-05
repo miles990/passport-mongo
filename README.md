@@ -1,5 +1,6 @@
 passport-mongo
 ==============
+[Demo](https://hidden-gorge-5702.herokuapp.com/) on heroku
 
 This repository serves as an example of a basic Node.js application which is using [Passport](http://passportjs.org/) as the authentication middleware for authenticating against a locally configured Mongo backend
 
