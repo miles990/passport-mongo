@@ -1,15 +1,26 @@
 extends layout
 
-block content
+block nav
+	include partial/nav
+
+block pageTitle
+	.jumbotron
+		h1 三讚工作坊
+		h2 這是一個熱愛手作以及天然食品的園地
+
+block pageContent
+	//- h1= title
+	//- p Welcome to #{title}
+
 	div.container
 		div.row
 			div.col-sm-6.col-md-4.col-md-offset-4
 				#user
-					h1.text-center.login-title Welcome #{user.firstName}. Check your details below:
+					h1.text-center.login-title Welcome #{user.firstName}. 登入後頁面
 						div.signup-wall
 							ul.user-details
 								li Username ---> #{user.username}
 								li Email    ---> #{user.email}
 								li First Name ---> #{user.firstName} 
 								li Last Name ---> #{user.lastName}
-						a(href='/signout', class='text-center new-account') Sign Out
+						a(href='/signout', class='text-center new-account') 登出

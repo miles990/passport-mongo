@@ -40,7 +40,8 @@ module.exports = function(passport){
 
 	/* GET Home Page */
 	router.get('/home', isAuthenticated, function(req, res){
-		res.render('home', { user: req.user });
+	//router.get('/home', function(req, res){ //暫時拿掉認證，方便測試
+		res.render('home', { title: '我的APP', user: req.user });
 	});
 
 	/* Handle Logout */
@@ -48,6 +49,17 @@ module.exports = function(passport){
 		req.logout();
 		res.redirect('/');
 	});
+
+	// router.get('gallery/:id', isAuthenticated, function(req, res) {
+	//     var kind = req.params.id;
+	    
+	//     res.render('gallery', {
+	//         gallery: {
+	//             list: gallery[kind],
+	//             kind: gallery.galleryTypeName[kind]
+	//         }
+	//     });
+	// });
 
 	return router;
 }

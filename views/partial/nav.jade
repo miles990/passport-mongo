@@ -1,0 +1,39 @@
+nav(class='navbar navbar-default', role='navigation')
+  .container-fluid
+    .navbar-header
+      button(class='navbar-toggle', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+        span.sronly
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a(class='navbar-brand', href='/home') Home
+    #bs-example-navbar-collapse-1(class='collapse navbar-collapse')
+      ul(class='nav navbar-nav')
+        li
+          a(href='/gallery/candy') 糖果
+        li
+          a(href='/gallery/sauce') 醬料
+        li
+          a(href='/gallery/felt') 羊毛氈
+        li
+          a(href='/signout') 登出
+
+//- .navbar.navbar-default.navbar-static-top(role='navigation')
+//-       .container
+//-           .navbar-header
+//-             button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+//-               span.sr-only Toggle navigation
+//-               span.icon-bar
+//-               span.icon-bar
+//-               span.icon-bar
+//-             a.navbar-brand(href='#') #{brand}
+//-           .navbar-collapse.collapse
+//-             ul.nav.navbar-nav
+//-               - var obj = { 'home':'Home', 'cart':'購物車' }
+//-                 - each val, key in obj
+//-                   - if (id == key)
+//-                     li.active
+//-                       a(href='#{key}', class="glyphicon glyphicon-shopping-cart") #{val}
+//-                   - else            
+//-                     li
+//-                       a(href='#{key}', class="glyphicon glyphicon-shopping-cart") #{val}

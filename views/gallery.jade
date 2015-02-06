@@ -1,0 +1,17 @@
+extends layout
+
+block nav
+	include partial/nav
+
+block pageTitle
+	//this will get displayed in the pageTitle block in layout.jade.
+	//This makes a reference backing data model of this page
+	h1 #{gallery.kind}
+
+block pageContent
+
+	ul
+	each item in gallery.list
+		.well
+			h2 #{item.name}
+			img(src='#{item.photo}')
