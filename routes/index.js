@@ -50,16 +50,19 @@ module.exports = function(passport){
 		res.redirect('/');
 	});
 
-	// router.get('gallery/:id', isAuthenticated, function(req, res) {
-	//     var kind = req.params.id;
+
+	/* GET gallery */
+	var gallery = require('../data/galleryData');
+	router.get('/gallery/:id', isAuthenticated, function(req, res) {
+	    var kind = req.params.id;
 	    
-	//     res.render('gallery', {
-	//         gallery: {
-	//             list: gallery[kind],
-	//             kind: gallery.galleryTypeName[kind]
-	//         }
-	//     });
-	// });
+	    res.render('gallery', {
+	        gallery: {
+	            list: gallery[kind],
+	            kind: gallery.galleryTypeName[kind]
+	        }
+	    });
+	});
 
 	return router;
 }
